@@ -1,0 +1,94 @@
+﻿<Window x:Class="Personal_Trackeer.Views.Transactions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Personal_Trackeer.Views"
+        mc:Ignorable="d"
+        Title="Transactions" Height="717" Width="920" 
+        MinHeight="650" MinWidth="800">
+    <Window.Resources>
+        <Style x:Key="Cbox" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value >
+                    <ControlTemplate TargetType="TextBox">
+                        <Border BorderThickness="1"
+                         CornerRadius="10"
+                         BorderBrush="Black"
+                         >
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            
+       </Style>
+        <Style x:Key="pass" TargetType="PasswordBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="PasswordBox">
+                        <Border CornerRadius="10" 
+                              BorderBrush="Black" 
+                              BorderThickness="1" 
+                              Background="{TemplateBinding Background}">    
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+    <Grid Background="#2a2e34" Margin="0,0,0,-53">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border  Height="650" Margin="35"  BorderThickness="5" BorderBrush="#FF066351" CornerRadius="10" Grid.Column="0" >
+            <StackPanel Orientation="Vertical" Background="White">
+                <Label Content="withdraw" HorizontalAlignment="Center" Margin="50" FontSize="25" FontWeight="ExtraBold"></Label>
+                
+                <Label Margin="15,0" HorizontalAlignment="Left" Content="User Id" Width="351" FontSize="16" FontWeight="ExtraBold"/>
+                <TextBox Style="{StaticResource Cbox}" Margin="10" Height="30" x:Name="UID" ></TextBox>
+
+                <Label Margin="15,0" HorizontalAlignment="Left" Content="Code" Width="351" FontSize="16" FontWeight="ExtraBold"/>
+                <TextBox Style="{StaticResource Cbox}" Margin="10,10,10,10" Height="30" x:Name="Vcode"  ></TextBox>
+
+                <Label Margin="15,0" HorizontalAlignment="Left" Content="Password" Width="351" FontSize="16" FontWeight="ExtraBold"/>
+                <PasswordBox Style="{StaticResource pass }" Margin="10" Height="30" x:Name="Pass"></PasswordBox>
+                
+                <Label Margin="15,0" HorizontalAlignment="Left" Content="Withdrawal Value" Width="351" FontSize="16" FontWeight="ExtraBold"/>
+                <TextBox Style="{StaticResource Cbox}" Margin="10,10,10,10" Height="30"  x:Name="WithVal" ></TextBox>
+
+
+                <Button Content="Withdraw" Width="120"  Margin="10,50" Grid.Row="1" Background="#FF0B6351" Foreground="#FFE9EAEC" FontWeight="Bold" FontFamily="72 Black" Height="45" Click="Withdraw"/>
+            </StackPanel>
+        </Border>
+        
+        
+        <Border Height="650" Margin="35" BorderThickness="5" BorderBrush="#FF066351" CornerRadius="10" Grid.Column="1">
+            <StackPanel Orientation="Vertical" Background="White">
+                <Label Content="Deposit" HorizontalAlignment="Center" Margin="50" FontSize="25" FontWeight="ExtraBold"></Label>
+                
+                <Label Margin="15,0" HorizontalAlignment="Left" Content="User Id" Width="351" FontSize="16" FontWeight="ExtraBold"/>
+                <TextBox Style="{StaticResource Cbox}" Margin="10" Height="30" x:Name="UIDD"></TextBox>
+
+
+                <Label Margin="15,0" HorizontalAlignment="Left" Content="Code" Width="351" FontSize="16" FontWeight="ExtraBold"/>
+                <TextBox Style="{StaticResource Cbox}" Margin="10,10,10,10" Height="30" x:Name="Vcode2" ></TextBox>
+
+
+                <Label  Margin="15,0" HorizontalAlignment="Left" Content="Password" Width="351" FontSize="16" FontWeight="ExtraBold"/>
+                <PasswordBox Style="{StaticResource pass }" Margin="10" Height="30" x:Name="Pass2"></PasswordBox>
+                
+                <Label Margin="15,0" HorizontalAlignment="Left" Content="Deposit Value" Width="351" FontSize="16" FontWeight="ExtraBold"/>
+                <TextBox Style="{StaticResource Cbox}" Margin="10,10,10,10" Height="30" x:Name="DepVal"></TextBox>
+
+                <Button Content="Deposit" Width="120"  Margin="10,50" Grid.Row="1" Background="#FF0B6351" Foreground="#FFE9EAEC" FontWeight="Bold" FontFamily="72 Black" Height="45" Click="Deposite"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
