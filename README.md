@@ -37,10 +37,7 @@ Personal_Tracker/
 │   ├── Add_New_User.xaml.cs    # User registration logic
 │   ├── Transactions.xaml       # Transaction operations UI
 │   └── Transactions.xaml.cs    # Transaction operations logic
-└── Migrations/
-    ├── 20251004113005_InitialCreate.cs           # Initial migration
-    ├── 20251004113005_InitialCreate.Designer.cs  # Migration designer
-    └── PersonalTrackerDBModelSnapshot.cs         # DB model snapshot
+
 ```
 
 ## 🗄️ Database Schema
