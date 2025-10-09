@@ -161,7 +161,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is for educational purposes.
 
-## 👨‍💻 Author
+## 👨‍💻 Eng-ahmed-dev1
 # Personal Tracker ![Dev](https://img.shields.io/badge/Developer-devAhmed-blue)
 Developed as a personal finance tracking application using WPF and Entity Framework Core.
 ---
